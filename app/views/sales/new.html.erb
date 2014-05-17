@@ -1,0 +1,5 @@
+<%= form_for(@sale) do |f| %>
+  <%= f.label :site %>
+  <%= f.collection_select(:site, Site.order(:url), :url, :url) %>
+  <%= f.submit %>
+<% end %>

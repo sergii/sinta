@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
+  root 'sales#new'
+  resources :sales, only: [:index, :show, :new, :create]
+
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
